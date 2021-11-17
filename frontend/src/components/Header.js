@@ -1,11 +1,17 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
+
+const navBarStyle = {
+  backgroundColor: "lightblue",
+};
 
 // Using object destructuring on props.title
 const Header = ({ title }) => {
   return (
-    <Navbar bg="light" variant="light">
-      <Navbar.Brand href="/">{title}</Navbar.Brand>
+    <Navbar style={navBarStyle} variant="light">
+      <Container>
+        <Navbar.Brand href="/">{title}</Navbar.Brand>
+      </Container>
     </Navbar>
   );
 };
